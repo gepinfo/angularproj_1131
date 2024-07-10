@@ -4,5 +4,5 @@ export * from "./gcamController";
 export * from "./AdminController";
 export * from "./CamundaController";
 export * from "./systemcredentialmanagerController";
-export * from "./CustomerController";
 export * from "./UserController";
+export * from "./CustomerController";

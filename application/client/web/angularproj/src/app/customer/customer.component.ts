@@ -7,7 +7,7 @@ import { NzSelectSizeType } from 'ng-zorro-antd/select';
 
 
 interface DataItem {
-  Enter_Name: String;
+  enter_name: String;
   accessProfile: String;
   status: String;
 }
@@ -25,7 +25,7 @@ public searchtickets:any;
         created_by: '',
         last_modified_by: '',
         last_modified_date: '',
-        Enter_Name: '',
+        enter_name: '',
     }
 
     isVisibleCreate = false;
@@ -71,7 +71,7 @@ public searchtickets:any;
      Create() {
       this.isVisibleCreate = false;
         this.customerService.PostAllcustomerValues(this.customer).subscribe((data:any) => {
-            this.Customer.Enter_Name = '',
+            this.Customer.enter_name = '',
             this.GetAllValues();
         },
         (error:Error) => {
@@ -95,7 +95,7 @@ public searchtickets:any;
 
     Update() {
         this.customerService.Updatecustomer(this.customer).subscribe((data:any) => {
-            this.Customer.Enter_Name = '';
+            this.Customer.enter_name = '';
             this.GetAllValues();
             this.isVisibleUpdate = false;
         },

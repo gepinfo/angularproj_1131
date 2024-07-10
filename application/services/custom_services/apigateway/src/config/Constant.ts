@@ -4,5 +4,5 @@ export const GCAMURL = process.env.GCAMURL;
 export const ADMINURL = process.env.ADMINURL;
 export const CAMUNDAURL = process.env.CAMUNDAURL;
 export const SYSTEMCREDENTIALMANAGERURL = process.env.SYSTEMCREDENTIALMANAGERURL;
-export const CUSTOMERURL = process.env.CUSTOMERURL;
 export const SYSTEMENTRYURL = process.env.SYSTEMENTRYURL;
+export const CUSTOMERURL = process.env.CUSTOMERURL;

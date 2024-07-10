@@ -36,7 +36,7 @@ describe('customerService', () => {
   it('should retrieve all values getallCustomer from the server', () => {
     const mockResponse = { data: [{
       _id:'id2', 
-      Enter_Name: 'Enter_Name 1',
+      enter_name: 'enter_name 1',
     }]};
     const jwtToken = '123Hsdf_23234fdsjk';
     const expectedUrl = `${service.BaseURL}/Customer`;
@@ -54,7 +54,7 @@ describe('customerService', () => {
   // test case gp create
   it('should send a POST request to the server', () => {
     const Customer = { 
-      Enter_Name: 'Enter_Name 1',
+      enter_name: 'enter_name 1',
     };
 
     
@@ -76,7 +76,7 @@ describe('customerService', () => {
   it('should send a PUT request to the server', () => {
     const Customer = { 
       id: '12dsadsa',
-      Enter_Name: 'Enter_Name 1',
+      enter_name: 'enter_name 1',
     };
     
     // Make the API call
@@ -119,7 +119,7 @@ describe('customerService', () => {
     const CustomerId = 123;
     const mockResponse = { 
       id: CustomerId, 
-      Enter_Name: 'Enter_Name 1',
+      enter_name: 'enter_name 1',
     };
 
     // Make the request

@@ -169,8 +169,8 @@ services:
       - authproxy
       - securitymanager
       - systemcredentialmanager
-      - customer
       - systementry
+      - customer
 
     networks:
       - angularproj_1131_net
@@ -246,12 +246,12 @@ services:
       - angularproj_1131_net
 
 
-  customer: 
-    build: ../../../application/services/custom_services/customer
-    image: customer-1131
-    container_name: customer-1131
+  systementry: 
+    build: ../../../application/services/custom_services/systementry
+    image: systementry-1131
+    container_name: systementry-1131
     ports: 
-      - 8026:8026
+      - 8027:8027
     env_file: .env
     depends_on:
       - mongo
@@ -267,12 +267,12 @@ services:
     mem_reservation: 150m
     cpus: 0.2
 
-  systementry: 
-    build: ../../../application/services/custom_services/systementry
-    image: systementry-1131
-    container_name: systementry-1131
+  customer: 
+    build: ../../../application/services/custom_services/customer
+    image: customer-1131
+    container_name: customer-1131
     ports: 
-      - 8025:8025
+      - 8028:8028
     env_file: .env
     depends_on:
       - mongo

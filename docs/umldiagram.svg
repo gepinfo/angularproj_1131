@@ -2,7 +2,7 @@
 <desc >#.interface: fill=lightblue
 #.enumeration: fill=lightgreen
 #.type: fill=lightgray
-[&lt;interface&gt;Customer|+created_date: { type: Date; };+created_by: { type: String; };+last_modified_by: { type: String; };+last_modified_date: { type: Date; };+Enter_Name: { type: String; }|]</desc>
+[&lt;interface&gt;Customer|+created_date: { type: Date; };+created_by: { type: String; };+last_modified_by: { type: String; };+last_modified_date: { type: Date; };+enter_name: { type: String; }|]</desc>
 <g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Helvetica" font-weight="normal" font-style="normal">
 <g font-family="Helvetica" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="3.0" stroke-linejoin="round" stroke-linecap="round" stroke="#33322E">
 <g stroke="transparent" fill="transparent">
@@ -32,7 +32,7 @@
 <text x="0.0" y="88.5" stroke="none" data-name="Customer">}</text>
 <text x="0.0" y="103.5" stroke="none" data-name="Customer">+last_modified_date: { type: Date</text>
 <text x="0.0" y="118.5" stroke="none" data-name="Customer">}</text>
-<text x="0.0" y="133.5" stroke="none" data-name="Customer">+Enter_Name: { type: String</text>
+<text x="0.0" y="133.5" stroke="none" data-name="Customer">+enter_name: { type: String</text>
 <text x="0.0" y="148.5" stroke="none" data-name="Customer">}</text>
 
 </g>

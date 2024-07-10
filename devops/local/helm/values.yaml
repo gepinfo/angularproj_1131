@@ -51,17 +51,17 @@ service:
     type: NodePort
     port: 8080
     targetPort: 8080
-  customer: 
-    name: customer
-    type: NodePort
-    port: 8026
-    targetPort: 8026
-
   systementry: 
     name: systementry
     type: NodePort
-    port: 8025
-    targetPort: 8025
+    port: 8027
+    targetPort: 8027
+
+  customer: 
+    name: customer
+    type: NodePort
+    port: 8028
+    targetPort: 8028
 
 
 deployment:
@@ -88,13 +88,13 @@ deployment:
   desktop:
      name: desktop
      image: geppettotest/angularproj-desktop:1.0
-  customer: 
-    name: customer
-    image: geppettotest/angularproj-customer:1.0
-
   systementry: 
     name: systementry
     image: geppettotest/angularproj-systementry:1.0
+
+  customer: 
+    name: customer
+    image: geppettotest/angularproj-customer:1.0
 
   camundapod:
      name: camundapod

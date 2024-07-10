@@ -9,7 +9,7 @@ export const CustomerSchema = new Schema({
    created_by: { type: String },
    last_modified_by: { type: String },
    last_modified_date: { type: Date, default: Date.now },
-   Enter_Name: { type: String }
+   enter_name: { type: String }
 })
 
 const CustomerModel = mongoose.model('Customer', CustomerSchema, 'Customer');

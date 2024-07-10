@@ -1,8 +1,8 @@
 <nz-modal [(nzVisible)]="isVisibleCreate" [nzTitle]="'Create User'" [nzContent]="modalContentCreate" [nzFooter]="modalFooterCreate">
       <ng-template #modalTitle>Create User</ng-template>
       <ng-template #modalContentCreate>
-        <nz-form-label id="template-iqrk" class="label"  style="margin-top: 20px;" >Enter_Name</nz-form-label>
-        <input nz-input placeholder="Enter Enter_Name" [(ngModel)]="Customer.Enter_Name" [ngModelOptions]="{standalone: true}" ngDefaultControl class="input form-control "/>
+        <nz-form-label id="template-iqrk" class="label"  style="margin-top: 20px;" >enter_name</nz-form-label>
+        <input nz-input placeholder="Enter enter_name" [(ngModel)]="Customer.enter_name" [ngModelOptions]="{standalone: true}" ngDefaultControl class="input form-control "/>
       </ng-template>
 
       <ng-template #modalFooterCreate>
@@ -14,8 +14,8 @@
 <nz-modal [(nzVisible)]="isVisibleUpdate" [nzTitle]="'Update User'" [nzContent]="modalContentUpdate" [nzFooter]="modalFooterUpdate">
   <ng-template #modalTitle>Update User</ng-template>
   <ng-template #modalContentUpdate>
-    <nz-form-label id="template-iqrk" class="label"  style="margin-top: 20px;" >Enter_Name</nz-form-label>
-    <input nz-input placeholder="Enter Enter_Name" [(ngModel)]="Customer.Enter_Name" [ngModelOptions]="{standalone: true}" ngDefaultControl class="input form-control "/>
+    <nz-form-label id="template-iqrk" class="label"  style="margin-top: 20px;" >enter_name</nz-form-label>
+    <input nz-input placeholder="Enter enter_name" [(ngModel)]="Customer.enter_name" [ngModelOptions]="{standalone: true}" ngDefaultControl class="input form-control "/>
   </ng-template>
 
   <ng-template #modalFooterUpdate>
@@ -42,14 +42,14 @@
         <nz-table #filterTable [nzData]="listOfData" nzTableLayout="fixed">
             <thead>
               <tr>
-                <th nzColumnKey="Enter_Name" [nzSortFn]="true">Enter_Name</th>
+                <th nzColumnKey="enter_name" [nzSortFn]="true">enter_name</th>
                 <th nzColumnKey="status" [nzFilters]="filterStatus" [nzFilterFn]="true">Status</th>
                 <th nzWidth="100px"></th>
               </tr>
             </thead>
             <tbody>
               <tr *ngFor="let data of filterTable.data">
-                <td>{{ data.Enter_Name }}</td>
+                <td>{{ data.enter_name }}</td>
                 <td>
                   <nz-switch [ngModel]="true" nzCheckedChildren="Active" nzUnCheckedChildren="In-Active"></nz-switch>
                 </td>

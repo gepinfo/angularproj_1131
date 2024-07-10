@@ -20,13 +20,13 @@ spec:
   - name: {{ .Values.service.admin.name }}
     port: {{ .Values.service.admin.port }}
     targetPort: {{ .Values.service.admin.targetPort }}
-  - name: {{ .Values.service.customer.name }}
-    port: {{ .Values.service.customer.port }}
-    targetPort: {{ .Values.service.customer.targetPort }}
-
   - name: {{ .Values.service.systementry.name }}
     port: {{ .Values.service.systementry.port }}
     targetPort: {{ .Values.service.systementry.targetPort }}
+
+  - name: {{ .Values.service.customer.name }}
+    port: {{ .Values.service.customer.port }}
+    targetPort: {{ .Values.service.customer.targetPort }}
 
   selector:
     name: {{ .Values.app.prefix }}-app

@@ -129,7 +129,7 @@ describe('CustomerComponent', () => {
     spyOn(service, 'PostAllcustomerValues').and.returnValue(of({}));
   
     // Set values for customer properties
-    component.Customer.Enter_Name = 'Enter_Name Name';
+    component.Customer.enter_name = 'enter_name Name';
 
     // Call the Create method
     component.Create();
@@ -138,7 +138,7 @@ describe('CustomerComponent', () => {
     expect(service.PostAllcustomerValues).toHaveBeenCalledWith(component.Customer);
 
     // Expect the customer properties to be reset
-    expect(component.Customer.Enter_Name).toBe('');
+    expect(component.Customer.enter_name).toBe('');
 
   });
   it('should log error on update PostAllcustomerValues failure', () => {
@@ -159,7 +159,7 @@ describe('CustomerComponent', () => {
   it('should set the rowData property on successful response', () => {
     const mockData:any = [{ 
       _id: 1, 
-      Enter_Name: 'Enter_Name 1',
+      enter_name: 'enter_name 1',
     }];
     spyOn(service, 'GetAllcustomerValues').and.returnValue(of(mockData));
 
@@ -188,7 +188,7 @@ describe('CustomerComponent', () => {
 
     component.Update();
 
-    expect(component.Customer.Enter_Name).toBe('');
+    expect(component.Customer.enter_name).toBe('');
   });
 
   it('should log error on update failure', () => {
