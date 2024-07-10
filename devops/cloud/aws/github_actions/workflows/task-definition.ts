@@ -70,7 +70,8 @@ module.exports = {
             ],
             "environmentFiles": null,
             "environment": [{"name":"MONGO_DB_URL","value":"mongodb://admin:password@127.0.0.1:27017/angularproj_1131?authSource=admin"},{"name":"MONGO_DOMAIN","value":"127.0.0.1"},{"name":"SECURITYURL","value":"http://127.0.0.1:8003"},{"name":"AUTHPROXYURL","value":"http://127.0.0.1:8001"},{"name":"ADMINURL","value":"http://127.0.0.1:8004"},{"name":"GCAMURL","value":"http://127.0.0.1:8007"},{"name":"APIGATEWAY","value":"http://127.0.0.1:8000"},{"name":"SYSTEMCREDENTIALMANAGERURL","value":"http://127.0.0.1:8005"}
-            ,{"name":"CUSTOMERURL","value":"http://angularproj.local:8023"}
+            ,{"name":"SYSTEMENTRYURL","value":"http://127.0.0.1:8025"}
+            ,{"name":"CUSTOMERURL","value":"http://angularproj0.local:8026"}
             ],
             "secrets": null,
             "mountPoints": [
@@ -292,6 +293,7 @@ module.exports = {
             ],
             "environmentFiles": null,
             "environment": [{"name":"MONGO_DB_URL","value":"mongodb://admin:password@127.0.0.1:27017/angularproj_1131?authSource=admin"},{"name":"MONGO_DOMAIN","value":"127.0.0.1"},{"name":"SECURITYURL","value":"http://127.0.0.1:8003"},{"name":"AUTHPROXYURL","value":"http://127.0.0.1:8001"},{"name":"ADMINURL","value":"http://127.0.0.1:8004"},{"name":"GCAMURL","value":"http://127.0.0.1:8007"},{"name":"APIGATEWAY","value":"http://127.0.0.1:8000"}
+            ,{"name":"SYSTEMENTRYURL","value":"http://127.0.0.1:8025"}
             ],
             "mountPoints": [
                 {
@@ -365,16 +367,16 @@ module.exports = {
             }
         },
         {
-            "name": "customer-1131",
-            "image": `${process.env.AWS_ACCOUNT_ID}.dkr.ecr.us-east-1.amazonaws.com/geppetto-generatedcode-angularproj-1131-customer:latest`,
+            "name": "systementry-1131",
+            "image": `${process.env.AWS_ACCOUNT_ID}.dkr.ecr.us-east-1.amazonaws.com/geppetto-generatedcode-angularproj-1131-systementry:latest`,
             "memoryReservation": "300",
             "resourceRequirements": null,
             "essential": true,
             "portMappings": [
                 {
-                    "containerPort": "8023",
+                    "containerPort": "8025",
                     "protocol": "tcp",
-                    "hostPort": "8023"
+                    "hostPort": "8025"
                 }
             ],
             "environmentFiles": null,

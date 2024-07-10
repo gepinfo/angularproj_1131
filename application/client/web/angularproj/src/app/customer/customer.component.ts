@@ -7,6 +7,7 @@ import { NzSelectSizeType } from 'ng-zorro-antd/select';
 
 
 interface DataItem {
+  Enter_Name: String;
   accessProfile: String;
   status: String;
 }
@@ -19,6 +20,13 @@ interface DataItem {
 
 export class CustomerComponent implements OnInit {
 public searchtickets:any;
+    public Customer:any = {
+        created_date: '',
+        created_by: '',
+        last_modified_by: '',
+        last_modified_date: '',
+        Enter_Name: '',
+    }
 
     isVisibleCreate = false;
     isVisibleUpdate = false;
@@ -34,6 +42,7 @@ public searchtickets:any;
 
     ngOnInit() {
         this.GetAllValues();
+        this.Customer.created_by = sessionStorage.getItem('email') || ''; 
         
 
 
@@ -62,6 +71,7 @@ public searchtickets:any;
      Create() {
       this.isVisibleCreate = false;
         this.customerService.PostAllcustomerValues(this.customer).subscribe((data:any) => {
+            this.Customer.Enter_Name = '',
             this.GetAllValues();
         },
         (error:Error) => {
@@ -85,6 +95,7 @@ public searchtickets:any;
 
     Update() {
         this.customerService.Updatecustomer(this.customer).subscribe((data:any) => {
+            this.Customer.Enter_Name = '';
             this.GetAllValues();
             this.isVisibleUpdate = false;
         },
@@ -142,6 +153,7 @@ public searchtickets:any;
 
     getUpdateById(data:any){
         this.isVisibleUpdate = true;
+        this.Customer = data;
     }
 }
 
